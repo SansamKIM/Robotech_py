@@ -1,0 +1,17 @@
+counter = 0
+
+def fibonacci(n):
+    print("fibonacci({})을 구합니다.".format(n))
+    global counter
+    counter += 1
+    
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        fibonacci(n - 1) + fibonacci(n - 2)
+
+fibonacci(10)
+print("---")
+print("fibonacci(10)을 계산할 때 함수를 호출한 횟수는 {}번입니다.".format(counter))
